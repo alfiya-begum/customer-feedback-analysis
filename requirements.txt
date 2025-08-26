@@ -1,4 +1,4 @@
-python_version=="3.11.*"
+python_version==3.11.9
 numpy==2.1.1
 Flask==3.0.3
 Flask-SQLAlchemy==3.1.1
@@ -7,3 +7,4 @@ mlxtend==0.23.1
 nltk==3.9.1
 matplotlib==3.9.2
 gunicorn==22.0.0
+
