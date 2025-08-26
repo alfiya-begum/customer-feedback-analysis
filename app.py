@@ -15,8 +15,8 @@ import matplotlib.pyplot as plt
 nltk.download('vader_lexicon')
 
 app = Flask(__name__)
-app.config['SECRET_KEY']  # Replace with a secure key in production
-app.config['SQLALCHEMY_DATABASE_URI'] 
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY", "fallback-secret-key")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///reviews.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -327,5 +327,6 @@ if __name__ == "__main__":
     # Ensure static/images exists for charts & backgrounds
     ensure_graph_dir()
     app.run(debug=True)
+
 
 
