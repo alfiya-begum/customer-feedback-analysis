@@ -324,9 +324,10 @@ def seed_demo():
 
 
 if __name__ == "__main__":
-    # Ensure static/images exists for charts & backgrounds
     ensure_graph_dir()
-    app.run(debug=True)
+    app.run(debug=True)  # only for local testing
+
+
 
 
 
