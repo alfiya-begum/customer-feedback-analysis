@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Welcome | Feedback Insights{% endblock %}
+{% block content %}
+<div class="hero" style="background-image: url('{{ url_for('static', filename='images/bg_welcome.jpg') }}')">
+  <div class="overlay text-center text-white p-4">
+    <h1 class="display-5 fw-bold"> Customer Reviews into Insights</h1>
+    <p class="lead">Collect feedback, visualize sentiment, and get product recommendations.</p>
+    <a href="{{ url_for('give_review') }}" class="btn btn-primary btn-lg">Give Review</a>
+    <a href="{{ url_for('charts') }}" class="btn btn-outline-light btn-lg ms-2">View Charts</a>
+  </div>
+</div>
+{% endblock %}

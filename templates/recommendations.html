@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Recommendations{% endblock %}
+{% block content %}
+<div class="page-bg" style="background-image: url('{{ url_for('static', filename='images/bg_recommendations.jpg') }}')">
+  <div class="overlay p-4 col-lg-10 mx-auto text-white">
+    <h2 class="mb-3">Recommendations</h2>
+
+    {% if product_recommendations and product_recommendations|length > 0 %}
+      <h5>Product association rules</h5>
+      <ul class="list-group mb-4">
+        {% for rec in product_recommendations %}
+          <li class="list-group-item">
+            <strong>Rule:</strong> {{ rec.rule }}<br>
+            <strong>Recommended:</strong> {{ rec.recommended_products }}<br>
+            <small>support: {{ rec.support }} • confidence: {{ rec.confidence }} • lift: {{ rec.lift }} • sentiment: {{ rec.sentiment }}</small>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <div class="alert alert-warning">No product found yet. Add reviews.</div>
+    {% endif %}
+
+    <h5 class="mt-3">Simple suggestions</h5>
+    <ul class="list-group">
+      {% for s in simple_recommendations %}
+        <li class="list-group-item">{{ s }}</li>
+      {% endfor %}
+    </ul>
+
+    <div class="mt-3">
+      <a class="btn btn-outline-light" href="{{ url_for('give_review') }}">Add more reviews</a>
+      <a class="btn btn-secondary ms-2" href="{{ url_for('charts') }}">View Charts</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

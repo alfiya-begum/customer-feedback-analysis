@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Submit Review{% endblock %}
+{% block content %}
+<div class="page-bg" style="background-image: url('{{ url_for('static', filename='images/bg_review.jpg') }}')">
+  <div class="overlay p-4 col-lg-8 mx-auto text-white">
+    <h2 class="mb-3">Submit Your Review</h2>
+
+    <form method="POST" action="{{ url_for('give_review') }}">
+      <div class="mb-3">
+        <textarea name="review" class="form-control" rows="5" placeholder="Write your feedback..." required></textarea>
+      </div>
+      <button class="btn btn-success" type="submit">Submit Review</button>
+      <a href="{{ url_for('charts') }}" class="btn btn-outline-light ms-2">View Charts</a>
+    </form>
+
+    {% if sentiment is defined %}
+      <div class="alert alert-info mt-4">
+        <strong>Sentiment score (VADER compound):</strong> {{ '%.3f'|format(sentiment) }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
