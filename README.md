@@ -1,4 +1,4 @@
-# 📝 Customer Feedback Analysis S
+# 📝 Customer Feedback Analysis 
 
 This project is a **Flask-based web application** that analyzes customer reviews using **Natural Language Processing (NLP)** techniques. It performs **sentiment analysis**, generates **recommendations**, and provides **visual insights** with bar and pie charts.  
 
