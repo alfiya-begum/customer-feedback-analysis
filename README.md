@@ -2,7 +2,7 @@
 
 This project is a **Flask-based web application** that analyzes customer reviews using **Natural Language Processing (NLP)** techniques. It performs **sentiment analysis**, generates **recommendations**, and provides **visual insights** with bar and pie charts.  
 
-🔗 Live Demo: [Customer Feedback Analysis on Render](https://alfiya-feedback-system.onrender.com)
+🔗 Live Demo: [Customer Feedback Analysis](https://alfiya-feedback-system.onrender.com)
 
 ---
 
