@@ -10,13 +10,13 @@ This project is a **Flask-based web application** that analyzes customer reviews
 
 Customer-Feedback-Analysis/
 
-│── static/                  # CSS & images  
-│── templates/               # HTML templates (welcome.html, index.html, recommendations.html, stored_reviews.html, charts.html, base.html)  
-│── app.py                   # Flask backend  
-│── requirements.txt         # Dependencies  
-│── Procfile                 # For deployment  
-│── runtime.txt              # Python version  
-│── README.md                # Documentation  
+│── static/                   
+│── templates/               
+│── app.py                   
+│── requirements.txt         
+│── Procfile                   
+│── runtime.txt              
+│── README.md                  
 
 ---
 
